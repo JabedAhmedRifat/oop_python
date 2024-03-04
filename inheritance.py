@@ -62,3 +62,79 @@ s.buy()
 # concept (method overridding) --> concept form polymorphism 
 # when child and parents has same method with same name , when call with child object, then child method will be called
 
+#-----------------------------------------------------------------------------------
+
+
+class Parent:
+
+    def __init__(self, num):
+        self.__num = num
+
+    def get_num(self):
+        return self.__num
+    
+class Child(Parent):
+    
+    def show(self):
+        print("this is child class")
+
+
+son = Child(100)
+print(son.get_num())
+son.show()
+
+# => 100
+# => this is child class 
+
+
+#-----------------------------------------------------------------
+
+
+class Parent:
+
+    def __init__(self, num):
+        self.__num = num
+
+    def get_num(self):
+        return self.__num
+    
+class Child(Parent):
+
+    def __init__(self, val, num):
+        self.__val = val 
+
+    
+    
+    def get_val(self):
+        return self.__val
+
+
+son = Child(100,1)
+
+print("parent: num:" , son.get_num()) # got error cause , when child constructor got triggered , parent's constructor wont triggered because child already has constructor
+print("child: num:" , son.get_val())
+
+
+#--------------------------------------------------------
+
+class A:
+
+    def __init__(self):
+        self.var1 = 100
+
+    def display(self, var1):
+        print("class A:", self.var1)
+
+class B:
+
+    def display2(self, var1):
+        print("class B:", self.var1)
+        
+obj = B()
+obj.display1(200)
+
+# => class A: 100 # cause print("class A:", self.var1) this is not in use or replaced 
+
+
+
+
