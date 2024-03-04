@@ -12,9 +12,13 @@ class Atm:
 
         self.menu()
 
+
+    @staticmethod
     def get_counter():
         return Atm.__counter
     
+
+    @staticmethod
     def set_counter(new):
         if type(new) == int:
             Atm.__counter = new
