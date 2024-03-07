@@ -65,3 +65,6 @@ s.buy()
 # if Phone class is in first queue then buying phone will be executed
 
 # => product buy method
+
+
+
