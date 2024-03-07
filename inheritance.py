@@ -35,7 +35,7 @@ print(s.__brand)
 
 # concept : child class cannot call parnets class's hidden member /data 
 
-#-------------------------------------------------------------
+#--------------------------Polymorphism-----------------------------------
 
 
 class Phone:
@@ -58,6 +58,9 @@ class SmartPhone(Phone):
 s = SmartPhone(2000, "Apple")
 
 s.buy()
+
+# => Inside phone constructor
+# => Buying a smartphone 
 
 # concept (method overridding) --> concept form polymorphism 
 # when child and parents has same method with same name , when call with child object, then child method will be called
